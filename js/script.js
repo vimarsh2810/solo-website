@@ -96,3 +96,12 @@ $(function () {
         navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>']
     });
 });
+
+// =========== Stats-CounterUp =============
+
+$(function() {
+    $('.counter').counterUp({
+        delay: 10,
+        time: 1300
+    });
+});
