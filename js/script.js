@@ -105,3 +105,18 @@ $(function() {
         time: 1300
     });
 });
+
+// =========== Clients section =============
+
+$(function () {
+    $('#clients-list').owlCarousel({
+        items: 6,
+        nav: true,
+        loop: true,
+        dots: false,
+        autoplay: false,
+        smartSpeed: 700,
+        autoplayHoverPause: true,
+        navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>']
+    });
+});
