@@ -1169,3 +1169,21 @@ ul.office-details li i {
     height: 600px;
     width: 100%;
 }
+
+/* ==============================================
+                Footer
+================================================*/
+
+footer {
+    background: #212226;
+    padding: 30px;
+}
+
+footer p {
+    color: #fff;
+    line-height: 20px;
+}
+
+footer p span {
+    color: #f4c613;
+}
