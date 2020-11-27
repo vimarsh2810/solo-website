@@ -120,3 +120,35 @@ $(function () {
         navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>']
     });
 });
+
+// =========== Google map =============
+// function initMap() {
+//     var myLatlng = {lat: -25.363, lng: 131.044};
+//     var map = new google.maps.Map(document.getElementById('map'), {
+//         zoom: 11,
+//         center: myLatlng
+//     });
+//     var marker = new google.maps.Marker({
+//         position: myLatlng,
+//         maps: map
+//     });
+// }
+$(window).on('load', function() {
+    var addressString = '230 Broadway, NY New York 10007, USA';
+    var location = {lat: 40.712684, lng: -74.225920};
+    var map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 11,
+        center: location
+    });
+    var marker = new google.maps.Marker({
+        position: location,
+        map: map,
+        title: 'Click To See Address'
+    });
+    var infowindow = new google.maps.InfoWindow({
+        content: addressString
+    });
+    marker.addListener('click', function() {
+        infowindow.open(map, marker);
+    });
+});

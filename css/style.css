@@ -1160,3 +1160,12 @@ ul.office-details li i {
 #contact-right form textarea.form-control {
     min-height: 164px;
 }
+
+/* ==============================================
+                Google maps
+================================================*/
+
+#map {
+    height: 600px;
+    width: 100%;
+}
