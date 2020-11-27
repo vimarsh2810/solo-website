@@ -42,11 +42,40 @@
 </head>
 
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="65">
     <!--Preloader-->
     <div id="preloader">
         <div id="status">&nbsp;</div>
     </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#home">
+                    <img src="img/logo/logo.png" alt="logo">
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse">
+
+                <ul class="nav navbar-nav mr-auto" style="margin-left: 500px;">
+                    <li><a class="nav-link smooth-scroll" href="#home">Home</a></li>
+                    <li><a class="nav-link smooth-scroll" href="#about">About</a></li>
+                    <li><a class="nav-link smooth-scroll" href="#team">Team</a></li>
+                    <li><a class="nav-link smooth-scroll" href="#services">Services</a></li>
+                    <li><a class="nav-link smooth-scroll" href="#portfolio">Work</a></li>
+                    <li><a class="nav-link smooth-scroll" href="#blog">Blog</a></li>
+                    <li><a class="nav-link smooth-scroll" href="#contact">Contact</a></li>
+                </ul>
+
+            </div>
+
+        </nav>
+    </header>
+    <!-- Header ends-->
+    
     <!-- Home -->
     <section id="home">
         <!-- BG-Video -->
@@ -71,13 +100,13 @@
                 </div>
 
                 <div id="home-btn">
-                    <a class="btn btn-general btn-home" href="#about" title="Start Now" role="button">Start Now</a>
+                    <a class="btn btn-general btn-home smooth-scroll" href="#about" title="Start Now" role="button">Start Now</a>
                 </div>
             </div>
         </div>
 
         <!-- Arrow down -->
-        <a href="#about" id="arrow-down">
+        <a href="#about" id="arrow-down" class="smooth-scroll">
             <i class="fas fa-angle-down"></i>
         </a>
 
@@ -1705,6 +1734,11 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Back to top -->
+        <a href="#home" id="back-to-top" class="btn btn-sm btn-yellow btn-back-to-top smooth-scroll" title="home" role="button">
+            <i class="fa fa-angle-up"></i>
+        </a>
     </footer>
     <!-- Footer ends -->
 </body>
@@ -1736,6 +1770,9 @@
 <!-- Google map JS -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqAfK0qZJYV8LezMAeqSsEOZVe-nxRzgg" defer>
 </script>
+
+<!-- Easing -->
+<script src="js/easing/jquery.easing.1.3.js"></script>
 
 <!-- Custom js -->
 <script src="js/script.js"></script>
