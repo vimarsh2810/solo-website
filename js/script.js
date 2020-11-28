@@ -18,6 +18,14 @@ $(function () {
       '<i class="fas fa-angle-left"></i>',
       '<i class="fas fa-angle-right"></i>',
     ],
+    responsive: {
+      0: {
+        items: 1
+      },
+      480: {
+        items: 2
+      }
+    }
   });
 });
 
@@ -186,4 +194,38 @@ $(function () {
       "easeInOutExpo"
     );
   });
+});
+
+// ================ remove text-right class for service icon on window < 769px
+
+$(window).on('resize', function(){
+  var win = $(this);
+  if (win.width() < 768) { 
+    $('.icon').removeClass('text-right');
+  } else
+  {
+    $('.icon').addClass('text-right');
+  }
+
+});
+
+function checkWidth(init)
+{
+    /*If browser resized, check width again */
+    if ($(window).width() < 768) {
+      $('.icon').removeClass('text-right');
+    }
+    else {
+        if (!init) {
+          $('.icon').addClass('text-right');
+        }
+    }
+}
+
+$(document).ready(function() {
+    checkWidth(true);
+
+    $(window).resize(function() {
+        checkWidth(false);
+    });
 });

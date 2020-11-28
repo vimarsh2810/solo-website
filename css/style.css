@@ -536,9 +536,7 @@ ul.social-list li:nth-child(3) a:hover {
                 Services-01
 ================================================*/
 
-#services-1 img {
-  margin: 60px 0;
-}
+
 
 .service {
   margin: 35px 0;
@@ -834,7 +832,7 @@ ul.social-list li:nth-child(3) a:hover {
 .testimonial .author .author-name-des {
   width: 106px;
   margin-top: 25px;
-  text-align: ledt;
+  text-align: left;
 }
 
 /*====================================================
@@ -1126,12 +1124,13 @@ ul.office-details {
 ul.office-details li {
   font-family: "Open Sans", sans-serif;
   margin-top: 12px;
-  display: flex;
+  display: inline-flex;
 }
 
 ul.office-details li i {
   font-size: 20px;
-  width: 45px;
+  min-width: 28px;
+  text-align: center;
 }
 
 #contact-left ul.social-list li a {
@@ -1209,8 +1208,12 @@ footer p span {
   transition: all 0.25s linear;
 }
 
+.navbar .collapse {
+  margin-left: 500px;
+}
+
 .navbar-header {
-  padding: 0 85px;
+  padding: 0 0 0 85px;
 }
 
 .navbar-brand {
