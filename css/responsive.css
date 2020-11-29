@@ -1,3 +1,85 @@
+/* ==============================================
+                Mobile Menu
+================================================*/
+.navbar-header {
+  position: relative;
+}
+
+#mobile-nav-open-btn {
+  font-size: 30px;
+  color: #f4c613;
+  cursor: pointer;
+  z-index: 2;
+  position: absolute;
+  right: 20px;
+  top: 16px;
+
+  /* Hide */
+  display: none;
+
+}
+
+ul.navbar-nav > li > a.active {
+  color: #f4c613;
+  font-weight: 500;
+}
+
+.mobile-nav {
+  /* By default mobile-nav will be hidden i.e. height: 0; */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  overflow: hidden;
+  height: 0;
+  top: 10%;
+  transition: 0.5s;
+}
+
+#mobile-nav-content {
+  padding-left: 0;
+  top: 8%;
+}
+
+#mobile-nav-close-btn {
+  font-family: 'Raleway', sans-serif;
+  font-size: 70px;
+  color: #212226;
+  font-weight: 400;
+  cursor: pointer;
+  position: absolute;
+  top: -20px;
+  right: 15px;
+}
+
+.mobile-nav ul li {
+  margin-bottom: 20px;
+}
+
+.mobile-nav a {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  color: #212226;
+  font-weight: 400;
+  text-transform: uppercase;
+  display: inline;
+  transition: 0.3s;
+}
+
+.mobile-nav a:hover,
+.mobile-nav a:focus {
+  color: #f4c613;
+}
+
+#mobile-nav-close-btn:hover,
+#mobile-nav-close-btn:focus {
+  color: #f4c613;
+}
+
+#mobile-nav ul.nav > li > a.active {
+  color: #f4c613;
+  font-weight: 500;
+}
 /*===============================================================
                       Media queries
 ================================================================*/
@@ -213,8 +295,33 @@
   }
 }
 
+@media (min-width: 576px) and (max-width: 768px) {
 
-@media (max-width: 767.9px) {
+  /* Navigation */
+  /* Show Menu nav open btn */
+  #mobile-nav-open-btn {
+    display: block;
+  }
+
+  .navbar {
+    padding: 20px 0;
+  }
+
+  #mobile-nav-content {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .white-nav-top {
+    background-color: rgba(255,255,255,0.9);
+    padding: 10px 0;
+    box-shadow: 0 8px 6px -9px #999;
+    z-index: 2;
+  }
+
+  .navbar-header {
+    padding: 0;
+  }
 
   /* Home */
   #home-heading h1 {
@@ -359,8 +466,8 @@
     padding-bottom: 0;
   }
 
-  #isotope-filter button {
-    padding-right: 15px;
+  #isotope-filters button {
+    padding-right: 20px;
   }
 
   /* Testtimonial */
@@ -445,5 +552,269 @@
     margin-bottom: 40px;
   }
 }
+
+@media (max-width: 575.9px) {
+
+  /* Navigation */
+  /* Show Menu nav open btn */
+  #mobile-nav-open-btn {
+    display: block;
+  }
+  .mobile-nav {
+    width: 100vw;
+  }
+  .navbar {
+    padding: 20px 0;
+  }
+
+  #mobile-nav-content {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .white-nav-top {
+    background-color: rgba(255,255,255,0.9);
+    padding: 10px 0;
+    box-shadow: 0 8px 6px -9px #999;
+    z-index: 2;
+  }
+
+  .navbar-header {
+    padding: 0;
+  }
+
+  /* Home */
+  #home-heading h1 {
+    font-size: 22px;
+  }
+
+  #home-text p {
+    font-size: 13px;
+    line-height: 18px;
+    margin: 8px 2px 30px 2px;
+  }
+
+  .btn-general {
+    padding: 8px 25px 6px 25px;
+    font-size: 10px;
+  }
+
+  /* About-1 */
+
+  .content-box-lg {
+    padding: 90px 0;
+  } 
+
+  .vertical-heading {
+    text-align: center;
+  }
+  .vertical-heading h5 {
+    transform: rotate(0deg);
+    display: block;
+    position: static;
+    margin-bottom: 15px;
+  }
+
+  .vertical-heading h2 {
+    font-size: 29px;
+    line-height: normal;
+    margin: 0;
+  }
+
+  #about-left {
+    margin-bottom: 50px;
+  }
+  #about-right {
+    text-align: center;
+  }
+
+  /* About-2 */
+
+  .content-box-md {
+    padding: 80px 0;
+  }
+
+  .about-item {
+    padding: 55px 30px;
+    margin-bottom: 35px;
+  }
+
+  .about-item i {
+    font-size: 30px;
+  }
+
+  .about-item h3 {
+    font-size: 18px;
+  }
+
+  #team-left .vertical-heading {
+    min-height: 130px;
+  }
+
+  .skill h4 {
+    font-size: 14px;
+    line-height: 35px;
+  }
+
+  #tech-statement h3 {
+    font-size: 17px;
+    line-height: 28px;
+  }
+
+  /* Services-1 */
+
+  .horizontal-heading {
+    margin-bottom: 40px;
+  }
+
+  .horizontal-heading h2 {
+    font-size: 30px;
+  }
+
+  #services-1 img {
+    margin: 35px 0;
+  }
+
+  .service, .service .icon {
+    text-align: center;
+  }
+
+  .service h4 {
+    font-size: 18px;
+  }
+
+  #services-tabs .tab-bg {
+    text-align: center;
+    padding: 40px 30px;
+  }
+
+  #services-tabs h2 {
+    font-size: 28px;
+  }
+
+  .r-tabs-accordion-title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: "Raleway", sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 0;
+    text-decoration: none;
+  }
+
+  .r-tabs-accordion-title a {
+    color: #212226;
+  }
+
+  .r-tabs-accordion-title.r-tabs-state-active a {
+    color: #f4c613;
+    font-weight: 700;
+    border-bottom: 3px solid #f4c613;
+    padding-bottom: 5px;
+    -webkit-transition: border-color 300ms linear;
+    transition: border-color 300ms linear;
+  }
+
+  .office ul li {
+    font-size: 14px;
+  }
+
+  /* Portfolio */
+
+  #portfolio {
+    padding-bottom: 0;
+  }
+
+  #isotope-filters button {
+    padding-right: 20px;
+  }
+
+  /* Testtimonial */
+  #testimonials {
+    padding-top: 45px;
+  }
+
+  #testimonial-slider {
+    top: 0;
+  }
+
+  #testimonials .vertical-heading {
+    padding: 0;
+  }
+
+  .testimonial h3 {
+    font-size: 11px;
+    line-height: normal;
+    padding-left: 0;
+  }
+  .testimonial .stars {
+    font-size: 8px;
+    padding: 0;
+  }
+
+  .author img {
+    width: 80px !important;
+  }
+
+  .testimonial .row {
+    margin: 0;
+  }
+
+  /* Pricing */
+  .pricing-table {
+    margin-bottom: 30px;
+  }
+  .pricing-table .price h2 {
+    font-size: 28px;
+    margin: 0 0 0 16px;
+  }
+
+  /* Stats */
+  .stats-item {
+    margin-bottom: 40px;
+    padding: 25px 5px;
+  }
+
+  .stats-item i {
+    font-size: 30px;
+  }
+
+  .stats-item h3 {
+    font-size: 24px;
+  }
+
+  /* Blog */
+  #blog-left {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .blog-post {
+    margin-bottom: 25px;
+  }
+
+  /* Contact */
+  #contact-left {
+    text-align: center;
+  }
+
+  .office {
+    margin-bottom: 40px;
+  }
+
+  ul.office-details li {
+    display: block;
+    margin-top: 25px;
+  }
+  ul.office-details li i {
+    width: auto;
+    display: block;
+    margin-bottom: 3px;
+  }
+  ul.social-list {
+    margin-bottom: 40px;
+  }
+}
  
+
 

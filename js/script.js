@@ -129,6 +129,17 @@ $(function () {
       '<i class="fas fa-angle-left"></i>',
       '<i class="fas fa-angle-right"></i>',
     ],
+    responsive: {
+      0: {
+        items: 2
+      },
+      480: {
+        items: 3
+      },
+      768: {
+        items: 6
+      }
+    }
   });
 });
 
@@ -151,6 +162,13 @@ $(window).on("load", function () {
   marker.addListener("click", function () {
     infowindow.open(map, marker);
   });
+
+  // Resize function
+  google.maps.event.addDomListener(window, 'resize', function() {
+    var cent = map.getCenter();
+    google.maps.event.trigger(map, 'resize');
+    map.setCenter(cent);
+  })
 });
 
 //============== Show & Hide white-nav-top ===============
@@ -222,10 +240,46 @@ function checkWidth(init)
     }
 }
 
-$(document).ready(function() {
-    checkWidth(true);
+function hideNav() {
+  if($(window).width() < 768) {
+    // alert('hello');
+    $('.navbar-nav').hide();
+    $('.mobile-nav').show();
+  } else {
+    $('.navbar-nav').show();
+    $('.mobile-nav').hide();
+  }
+}
 
-    $(window).resize(function() {
-        checkWidth(false);
-    });
+$(document).ready(function() {
+  checkWidth(true);
+  hideNav();
+
+  $(window).resize(function() {
+    checkWidth(false);
+    hideNav();
+  });
 });
+
+// ================== Mobile menu =======================
+// show white nav top
+$(function() {
+  $('#mobile-nav-close-btn').hide();
+  $('#mobile-nav-open-btn').click(function() {
+    $("nav").addClass("white-nav-top");
+    $('.mobile-nav').css('height', '100vh');
+    $('#mobile-nav-open-btn').hide();
+    $('#mobile-nav-close-btn').show();
+  });
+})
+
+// hide white nav top
+$(function() {
+  $('#mobile-nav-close-btn, .mobile-nav a').click(function() {
+    $('.mobile-nav').css('height', '0');
+    $("nav").removeClass("white-nav-top");
+    $('#mobile-nav-open-btn').show();
+    $('#mobile-nav-close-btn').hide();
+  });
+})
+
