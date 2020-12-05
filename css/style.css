@@ -364,6 +364,12 @@ section {
   transition: all 0.4s ease-in-out;
 }
 
+.about-item h3,
+.about-item p {
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
 /* ==============================================
                 Team
 ================================================*/
@@ -720,7 +726,7 @@ ul.social-list li:nth-child(3) a:hover {
   right: 0;
   background: rgba(14, 14, 17, 0.9);
   cursor: -webkit-zoom-in;
-  cursor: zoom-in;
+  cursor: pointer;
   opacity: 0;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -1191,6 +1197,7 @@ footer {
 footer p {
   color: #fff;
   line-height: 20px;
+  margin: 0;
 }
 
 footer p span {

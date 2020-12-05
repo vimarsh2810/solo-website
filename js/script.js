@@ -37,7 +37,7 @@ $(function () {
       $(".progress-bar").each(function () {
         $(this).animate({
           width: $(this).attr("aria-valuenow") + "%",
-        });
+        }, 1500);
       });
 
       this.destroy();
@@ -285,11 +285,7 @@ $(function() {
 
 // ================== Animation =======================
 
-// $(function() {
-//   new WOW().init();
-// })
-
-$(window).on('load', function() {
+$(function() {
   new WOW().init();
 })
 
