@@ -283,3 +283,20 @@ $(function() {
   });
 })
 
+// ================== Animation =======================
+
+// $(function() {
+//   new WOW().init();
+// })
+
+$(window).on('load', function() {
+  new WOW().init();
+})
+
+$(window).on('load', function() {
+  $('#home-heading-1').addClass('animate__animated animate__fadeInDown');
+  $('#home-heading-2').addClass('animate__animated animate__fadeInLeft');
+  $('#home-text').addClass('animate__animated animate__zoomIn');
+  $('#home-btn').addClass('animate__animated animate__zoomIn');
+  $('#arrow-down').addClass('animate__animated animate__fadeInDown animate__infinite');
+});
